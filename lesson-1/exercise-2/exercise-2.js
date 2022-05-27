@@ -9,6 +9,7 @@ let name = 'Василий';
 let admin = name;
 console.log(admin);
 
+
 /*
     node .\exercise-2.js
     Василий
