@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env node
 
 /*
 2. Чему будет равен x?
