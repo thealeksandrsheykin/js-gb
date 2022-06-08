@@ -18,7 +18,7 @@ while (i < n) {
     i++
 }
 console.log();
-
+// Второй вариант
 for(let i = 0; i <= 20; i++){
     for(let j = 20; j > i; j--){
        process.stdout.write('x')
