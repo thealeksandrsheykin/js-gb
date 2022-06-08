@@ -7,4 +7,24 @@
     xxx
     xxxx
     xxxxx
- */
+*/
+
+// Первый вариант
+var i = 0;
+var n = 21;
+
+while (i < n) {
+    console.log('x'.repeat(i));
+    i++
+}
+console.log();
+
+for(let i = 0; i <= 20; i++){
+    for(let j = 20; j > i; j--){
+       process.stdout.write('x')
+    }
+    console.log()
+}
+
+
+
