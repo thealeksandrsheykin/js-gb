@@ -7,3 +7,20 @@
     {‘единицы’: 5,‘десятки’: 4, ‘сотни’: 2}.
 Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
  */
+
+function number_to_string(number){
+    let result = {'единицы': 0,'десятки': 0, 'сотни': 0}
+    if (number > 999){
+        console.log('Данное число выходит за рамки диапозона: 0-999')
+        return result
+    }
+    else {
+        for (let [i, j] of [['сотни', 100], ['десятки', 10], ['единицы', 1]]) {
+            result[i] = Math.trunc(number / j)
+            number = number % j
+        }
+    }
+    return result
+}
+
+console.log(number_to_string(124))
