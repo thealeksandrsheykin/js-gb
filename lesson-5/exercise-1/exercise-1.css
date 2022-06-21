@@ -1,0 +1,30 @@
+table {
+    border-collapse: separate;
+    margin: auto;
+}
+
+tr {
+    width:  40px;
+    height: 40px;
+}
+
+td {
+    border: 1px solid #888888;
+    width:  40px;
+    height: 40px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+[number-row]:before {
+    content: attr(number-row);
+    position: absolute;
+    margin: 12px -15px;
+}
+
+[letter-col]:before {
+    content: attr(letter-col);
+    position: absolute;
+    margin-top: 24px;
+
+}
