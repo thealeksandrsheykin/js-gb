@@ -110,7 +110,7 @@ const catalog = {
             cart.addToCart(this.items[idx]);
         }
     },
-
+//-----------------------------------------------------------------
     pictureClickHandler (event) {
         this.settings.galleryMainContainer = `.${event.target.parentElement.className}`;
         if (event.target.tagName === 'IMG') {
@@ -120,9 +120,6 @@ const catalog = {
             return;
         };
     },
-//----------------------------------------------------------------
-
-
 
     createModal(img) {
         const galleryModal = document.createElement('div');
@@ -152,6 +149,7 @@ const catalog = {
         closeImg.parentElement.remove();
     },
 
+
 //---------------------------------------------------------------------------
     render() {
         const catalogWrapperElement = document.querySelector('.catalog');
@@ -174,9 +172,8 @@ const catalog = {
             //itemImgElement.setAttribute('data-full-image-url',`${item.picture_max}`);
             itemImgElement.setAttribute('alt',`${item.name}`);
             itemImgElement.dataset.fullImageUrl = `${item.picture_max}`;
+            itemImgElement.addEventListener('click', (event) => this.pictureClickHandler(event));
             containerElement.appendChild(itemImgElement);
-
-
 
             //Параграф (цена продукта)
             const itemPElement = document.createElement('p');
@@ -198,14 +195,12 @@ const catalog = {
             this.buttonClickHandler(event);
         });
 
-        catalogElement.addEventListener('click', (event)=>{
-            this.pictureClickHandler(event);
-        });
 
         catalogWrapperElement.appendChild(catalogElement);
 
         const itemHrElement = document.createElement('hr');
         catalogWrapperElement.appendChild(itemHrElement);
+
     }
 }
 
