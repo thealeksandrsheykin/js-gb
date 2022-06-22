@@ -1,0 +1,21 @@
+*{
+    margin:  0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+}
+p,h3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+hr{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.catalog, .cart{
+    margin: 24px;
+}
+
